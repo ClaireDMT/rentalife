@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_27_165226) do
+ActiveRecord::Schema.define(version: 2020_02_27_170109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +44,9 @@ ActiveRecord::Schema.define(version: 2020_02_27_165226) do
     t.string "social_status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
     t.index ["accommodation_id"], name: "index_lives_on_accommodation_id"
+    t.index ["user_id"], name: "index_lives_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -62,4 +64,5 @@ ActiveRecord::Schema.define(version: 2020_02_27_165226) do
   add_foreign_key "bookings", "lives"
   add_foreign_key "bookings", "users"
   add_foreign_key "lives", "accommodations"
+  add_foreign_key "lives", "users"
 end
