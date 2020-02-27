@@ -11,3 +11,27 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+body, a, input, p {
+  font-family: $Raleway;
+  color: $black;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  color: $pink;
+}
+
+
+h1, h2, h3, h4, h5 {
+  font-family: $Montserrat;
+}
+
+.container-height {
+  min-height: calc(100vh - 70px);
+  padding: 40px;
+}
