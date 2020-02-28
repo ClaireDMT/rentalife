@@ -1,5 +1,16 @@
 <div class="container">
+  <div class="life-product">
 
+  </div>
+  <div class="booking-form-wrapper" style="width: 250px; margin: 0 auto;">
+      <h2>Rent a life</h2>
+
+      <%= simple_form_for :booking, method: "get" do |f| %>
+        <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker", id: "start_date"} %>
+        <%= f.input :ends_date, as: :string, required: false, input_html: {class: "datepicker", id: "end_date"} %>
+        <%= f.button :submit, "Change life", class: "btn btn-swap" %>
+      <% end %>
+    </div>
 
 
 </div>

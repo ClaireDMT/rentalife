@@ -1,0 +1,28 @@
+.container-form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.container-form h2 {
+  margin-bottom: 20px;
+}
+
+.booking-form-wrapper {
+  border: 1px solid $green-light;
+  padding: 20px 40px 40px 40px;
+  border-radius: 10px;
+
+  h2 {
+    margin-bottom: 20px;
+}
+
+.booking-form-wrapper form .btn {
+    margin-top: 30px !important;
+  }
+
+  .form-control {
+    border: 1px solid rgba(204, 118, 128, 0.6);
+    opacity: 0.7;
+    color: $black;
+  }
+}

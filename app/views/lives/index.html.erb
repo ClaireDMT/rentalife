@@ -1,23 +1,32 @@
-<div class="container">
-  <div class="row">
-    <div class="cards">
-      <% @lives.each do |life| %>
-        <%= link_to life_path(life) do %>
-          <div class="card-trip">
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-            <div class="card-trip-infos">
-              <div>
-                <h2><%= life.title %></h2>
-                <p>Short description here!</p>
+<div id="index">
+  <div class="d-flex index-container">
+    <div class="row flex-item-cards">
+      <div class="cards">
+        <% @lives.each do |life| %>
+          <%= link_to life_path(life) do %>
+            <div class="card-trip">
+              <%= cl_image_tag life.photos[0].key, width: 400, height: 200, crop: :fill %>
+              <div class="card-trip-infos">
+                <div>
+                  <h2><%= life.title %></h2>
+                  <p>Be <%= life.social_status %></p>
+                </div>
+                <h2 class="card-trip-pricing"><%= life.price_per_day %></h2>
               </div>
-              <h2 class="card-trip-pricing"><%= life.price_per_day %></h2>
-              <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
             </div>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
 
+      </div>
     </div>
+
+    <div
+      id="map"
+      class="flex-item"
+      style="height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
   </div>
 </div>
 

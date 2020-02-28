@@ -12,14 +12,14 @@
   align-items: center;
 }
 .footer-links a {
-  color: $pink;
-  opacity: 0.15;
+  color: white;
+  opacity: 0.8;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
-  opacity: 1;
+  color: $pink;
 }
 .footer .fa-heart {
   color: $pink;

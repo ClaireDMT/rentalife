@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :bookings, through: :life
   has_many :bookings
   has_one :life
-  has_one_attached :photos
+  has_one_attached :photo
 end
