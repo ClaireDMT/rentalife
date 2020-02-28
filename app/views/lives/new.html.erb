@@ -1,0 +1,18 @@
+<div class="container-form">
+  <h2>Tell us a bit more about your life!</h2>
+  <%= simple_form_for(@life) do |form| %>
+    <%= form.input :title, label: "How would you describe your life in one short sentence?" %>
+    <%= form.input :job, label: "What is your job?" %>
+    <%= form.input :city, label: "Where do you live?" %>
+    <%= form.input :description, label: "Describe your typical day" %>
+    <%= form.input :marital_status %>
+    <%= form.input :kids %>
+    <%= form.association :accommodation, label_method: :accommodation_type %>
+    <%= form.input :social_status %>
+    <%= form.input :photos, as: :file, input_html: {multiple: true} %>
+
+
+    <%= form.button :submit, "Swap your life", class: "btn-swap" %>
+  <% end %>
+</div>
+

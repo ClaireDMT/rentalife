@@ -8,8 +8,12 @@
   flex-grow: 0;
 }
 
+.navbar-brand {
+  margin: 0;
+  padding: 0;
+}
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  height: 60px;
 }
 
 .navbar-lewagon .nav-item .nav-link {
